@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [status, setStatus] = useState(null);
   useEffect(() => {
-    checkWindowPermission();
+    // checkWindowPermission();
   }, []);
 
   const checkWindowPermission = async () => {
@@ -30,6 +30,7 @@ function App() {
   };
   return (
     <div className="App">
+      <button onClick={() => checkWindowPermission()}>Click for Permission</button>
       <span className="status">
         Window Management Permission Status is <b className="statusBold">{status}</b>
       </span>
